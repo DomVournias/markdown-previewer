@@ -51,7 +51,6 @@ function App() {
             <label htmlFor="editor" id="label">
               Preview
             </label>
-
             <div
               id="preview"
               name="preview"
