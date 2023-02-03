@@ -1,38 +1,103 @@
-.App {
+#root {
+  position: relative;
+  height: 100%;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1.5em;
+  background-color: #444;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 55px;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #444;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #444;
+  color: #e5e5e5;
+  text-align: center;
+  z-index: 1000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  position: absolute;
+  display: flex;
+  top: 55px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #e5e5e5;
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+aside {
+  width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 0.5rem;
+  height: calc(100vh - 55px - 33px);
+  box-sizing: border-box;
+}
+
+#left {
+  padding: 0rem 1rem 0rem 2rem;
+}
+
+#right {
+  padding: 0rem 2rem 0rem 1rem;
+}
+
+#inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+  padding: 1rem 0rem 1rem 0rem;
+  overflow-y: auto;
+}
+
+#github-icon {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #e5e5e5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#label {
+  font-size: 1.3rem;
+}
+
+#editor {
+  padding: 1rem;
+  height: 100%;
+  resize: none;
+}
+
+#preview {
+  padding: 1rem;
+  background-color: white;
+  height: 100%;
+  overflow-y: scroll;
+  word-wrap: break-word;
 }
